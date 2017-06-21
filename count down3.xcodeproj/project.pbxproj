@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0E7C1D1DF68C5700483212 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E7C1C1DF68C5700483212 /* ViewController5.swift */; };
+		4A475FF71EDECD8A00053EB9 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A475FF61EDECD8A00053EB9 /* ViewController3.swift */; };
+		4A53B6DE1EFA8835004FD85D /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53B6DD1EFA8835004FD85D /* RealmObject.swift */; };
+		4A53B6E01EFA88FD004FD85D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53B6DF1EFA88FD004FD85D /* TableViewController.swift */; };
+		4A657AFD1E264D3900E0B045 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A657AFB1E264D1600E0B045 /* AudioToolbox.framework */; };
+		4A80C8AD1E41EE0300B39544 /* ViewControllerFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80C8AC1E41EE0300B39544 /* ViewControllerFirst.swift */; };
+		4A80C8AF1E41F1B500B39544 /* CalenderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80C8AE1E41F1B500B39544 /* CalenderViewCell.swift */; };
+		4A80C8B11E41F32500B39544 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80C8B01E41F32500B39544 /* DateManager.swift */; };
 		4A9C11081DEEE03F0075AA61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C11071DEEE03F0075AA61 /* AppDelegate.swift */; };
 		4A9C110A1DEEE03F0075AA61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C11091DEEE03F0075AA61 /* ViewController.swift */; };
 		4A9C110D1DEEE03F0075AA61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C110B1DEEE03F0075AA61 /* Main.storyboard */; };
@@ -14,6 +22,8 @@
 		4A9C11121DEEE03F0075AA61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C11101DEEE03F0075AA61 /* LaunchScreen.storyboard */; };
 		4A9C111D1DEEE03F0075AA61 /* count_down3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C111C1DEEE03F0075AA61 /* count_down3Tests.swift */; };
 		4A9C11281DEEE03F0075AA61 /* count_down3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C11271DEEE03F0075AA61 /* count_down3UITests.swift */; };
+		4A9C11361DEEEB630075AA61 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C11351DEEEB630075AA61 /* ViewController2.swift */; };
+		4AC2B1E41DF2D49A0062312F /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2B1E31DF2D49A0062312F /* ViewController4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A0E7C1C1DF68C5700483212 /* ViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		4A475FF61EDECD8A00053EB9 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		4A53B6DD1EFA8835004FD85D /* RealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
+		4A53B6DF1EFA88FD004FD85D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4A657AFB1E264D1600E0B045 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4A80C8AC1E41EE0300B39544 /* ViewControllerFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFirst.swift; sourceTree = "<group>"; };
+		4A80C8AE1E41F1B500B39544 /* CalenderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewCell.swift; sourceTree = "<group>"; };
+		4A80C8B01E41F32500B39544 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		4A9C11041DEEE03F0075AA61 /* count down3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "count down3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9C11071DEEE03F0075AA61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A9C11091DEEE03F0075AA61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +65,8 @@
 		4A9C11231DEEE03F0075AA61 /* count down3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "count down3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9C11271DEEE03F0075AA61 /* count_down3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = count_down3UITests.swift; sourceTree = "<group>"; };
 		4A9C11291DEEE03F0075AA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A9C11351DEEEB630075AA61 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		4AC2B1E31DF2D49A0062312F /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A657AFD1E264D3900E0B045 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A657AFA1E264D1600E0B045 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A657AFB1E264D1600E0B045 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A9C10FB1DEEE03F0075AA61 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,7 @@
 				4A9C111B1DEEE03F0075AA61 /* count down3Tests */,
 				4A9C11261DEEE03F0075AA61 /* count down3UITests */,
 				4A9C11051DEEE03F0075AA61 /* Products */,
+				4A657AFA1E264D1600E0B045 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +128,16 @@
 			isa = PBXGroup;
 			children = (
 				4A9C11071DEEE03F0075AA61 /* AppDelegate.swift */,
+				4A80C8B01E41F32500B39544 /* DateManager.swift */,
+				4A80C8AE1E41F1B500B39544 /* CalenderViewCell.swift */,
+				4A53B6DF1EFA88FD004FD85D /* TableViewController.swift */,
 				4A9C11091DEEE03F0075AA61 /* ViewController.swift */,
+				4A80C8AC1E41EE0300B39544 /* ViewControllerFirst.swift */,
+				4A9C11351DEEEB630075AA61 /* ViewController2.swift */,
+				4A475FF61EDECD8A00053EB9 /* ViewController3.swift */,
+				4AC2B1E31DF2D49A0062312F /* ViewController4.swift */,
+				4A0E7C1C1DF68C5700483212 /* ViewController5.swift */,
+				4A53B6DD1EFA8835004FD85D /* RealmObject.swift */,
 				4A9C110B1DEEE03F0075AA61 /* Main.storyboard */,
 				4A9C110E1DEEE03F0075AA61 /* Assets.xcassets */,
 				4A9C11101DEEE03F0075AA61 /* LaunchScreen.storyboard */,
@@ -188,12 +227,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "新井山詠斗";
 				TargetAttributes = {
 					4A9C11031DEEE03F0075AA61 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = UVFVRC6C53;
+						DevelopmentTeam = W92SXP54MW;
 						ProvisioningStyle = Automatic;
 					};
 					4A9C11171DEEE03F0075AA61 = {
@@ -263,7 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9C110A1DEEE03F0075AA61 /* ViewController.swift in Sources */,
+				4A80C8B11E41F32500B39544 /* DateManager.swift in Sources */,
 				4A9C11081DEEE03F0075AA61 /* AppDelegate.swift in Sources */,
+				4A0E7C1D1DF68C5700483212 /* ViewController5.swift in Sources */,
+				4A80C8AF1E41F1B500B39544 /* CalenderViewCell.swift in Sources */,
+				4A475FF71EDECD8A00053EB9 /* ViewController3.swift in Sources */,
+				4A53B6E01EFA88FD004FD85D /* TableViewController.swift in Sources */,
+				4AC2B1E41DF2D49A0062312F /* ViewController4.swift in Sources */,
+				4A9C11361DEEEB630075AA61 /* ViewController2.swift in Sources */,
+				4A53B6DE1EFA8835004FD85D /* RealmObject.swift in Sources */,
+				4A80C8AD1E41EE0300B39544 /* ViewControllerFirst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +384,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -386,6 +435,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -415,12 +465,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UVFVRC6C53;
+				DEVELOPMENT_TEAM = W92SXP54MW;
 				INFOPLIST_FILE = "count down3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Niiyama-Eito.count-down3";
+				PRODUCT_BUNDLE_IDENTIFIER = "Niiyama-Eito.com.niiyama.count-down3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,12 +480,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UVFVRC6C53;
+				DEVELOPMENT_TEAM = W92SXP54MW;
 				INFOPLIST_FILE = "count down3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Niiyama-Eito.count-down3";
+				PRODUCT_BUNDLE_IDENTIFIER = "Niiyama-Eito.com.niiyama.count-down3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -514,6 +568,7 @@
 				4A9C112E1DEEE03F0075AA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A9C112F1DEEE03F0075AA61 /* Build configuration list for PBXNativeTarget "count down3Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +577,7 @@
 				4A9C11311DEEE03F0075AA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A9C11321DEEE03F0075AA61 /* Build configuration list for PBXNativeTarget "count down3UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +586,7 @@
 				4A9C11341DEEE03F0075AA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
