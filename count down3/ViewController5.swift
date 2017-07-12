@@ -14,17 +14,11 @@ class ViewController5: UIViewController {
     @IBOutlet weak var label2: UILabel!
     var text2: String = ""
     let year = DateFormatter()
-    @IBOutlet weak var yearlabel: UILabel!
     let month = DateFormatter()
-    @IBOutlet weak var monthlabel: UILabel!
     let day = DateFormatter()
-    @IBOutlet weak var daylabel: UILabel!
     let hour = DateFormatter()
-    @IBOutlet weak var hourlabel: UILabel!
     let minute = DateFormatter()
-    @IBOutlet weak var minutelabel: UILabel!
     let second = DateFormatter()
-    @IBOutlet weak var secondlabel: UILabel!
     
     @IBOutlet weak var test: UILabel!
     @IBOutlet weak var test2: UILabel!
@@ -44,36 +38,32 @@ class ViewController5: UIViewController {
     
     var name: String = ""
     
+    var timer: Timer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        yearlabel.isHidden = true
-        monthlabel.isHidden = true
-        daylabel.isHidden = true
-        hourlabel.isHidden = true
-        minutelabel.isHidden = true
-        secondlabel.isHidden = true
         label1.text = text1
         label2.text = text2
         label1.isHidden = true
         label2.isHidden = true
         
-        Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(mister), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(mister), userInfo: nil, repeats: true)
     }
     
     func mister() {
         let nowDate = Date()
         year.dateFormat = "yyyy"
-        yearlabel.text = year.string(from: nowDate as Date)
+        let yearnum = Int(year.string(from: nowDate as Date))!
         month.dateFormat = "MM"
-        monthlabel.text = month.string(from: nowDate as Date)
+        let monthnum = Int(month.string(from: nowDate as Date))!
         day.dateFormat = "dd"
-        daylabel.text = day.string(from: nowDate as Date)
+        let daynum = Int(day.string(from: nowDate as Date))!
         hour.dateFormat = "HH"
-        hourlabel.text = hour.string(from: nowDate as Date)
+        let hournum = Int(hour.string(from: nowDate as Date))!
         minute.dateFormat = "mm"
-        minutelabel.text = minute.string(from: nowDate as Date)
+        let minutenum = Int(minute.string(from: nowDate as Date))!
         second.dateFormat = "ss"
-        secondlabel.text = second.string(from: nowDate as Date)
+        let secondnum = Int(second.string(from: nowDate as Date))!
         
         let dateString = label1.text
         let set = CharacterSet(charactersIn: "年月日")
@@ -88,18 +78,6 @@ class ViewController5: UIViewController {
         var dateTuple2 = (0, 0)
         dateTuple2.0 = Int((dateArray2?[0])!) ?? -1
         dateTuple2.1 = Int((dateArray2?[1])!) ?? -1
-        let str = yearlabel.text
-        let yearnum = Int((str)!)!
-        let str2 = monthlabel.text
-        let monthnum = Int((str2)!)!
-        let str3 = daylabel.text
-        let daynum = Int((str3)!)!
-        let str4 = hourlabel.text
-        let hournum = Int((str4)!)!
-        let str5 = minutelabel.text
-        let minutenum = Int((str5)!)!
-        let str6 = secondlabel.text
-        let secondnum = Int((str6)!)!
         
         let start = "\(yearnum)/\(monthnum)/\(daynum) \(hournum):\(minutenum):\(secondnum)"
         let end = "\(dateTuple.0)/\(dateTuple.1)/\(dateTuple.2) \(dateTuple2.0):\(dateTuple2.1):00"
@@ -111,6 +89,15 @@ class ViewController5: UIViewController {
             test.isHidden = true
             if components.month == 0 {
                 test2.isHidden = true
+                if components.day == 0 {
+                    test3.isHidden = true
+                    if components.hour == 0 {
+                        test4.isHidden = true
+                        if components.minute == 0 {
+                            test5.isHidden = true
+                        }
+                    }
+                }
             }
         }
         if components.second! <= 0  {
@@ -129,11 +116,8 @@ class ViewController5: UIViewController {
                 test4.text = "\(components.hour! * -1) 時間"
                 test5.text = "\(components.minute! * -1) 分"
                 test6.text = "\(components.second! * -1) 秒"
-                let nowDate2 = Date()
-                let dateFormatter2 = DateFormatter()
-                dateFormatter2.dateFormat = "yyyy/MM/dd HH:mm:ss"
                 amazing.text = end
-                amazing2.text = dateFormatter2.string(from: nowDate2 as Date)
+                amazing2.text = dateFormatter.string(from: nowDate as Date)
             }
         }else{
             exciting.text = "\(name)まで"
@@ -143,14 +127,25 @@ class ViewController5: UIViewController {
             test4.text = "\(components.hour!) 時間"
             test5.text = "\(components.minute!) 分"
             test6.text = "\(components.second!) 秒"
-            let nowDate2 = Date()
-            let dateFormatter2 = DateFormatter()
-            dateFormatter2.dateFormat = "yyyy/MM/dd HH:mm:ss"
-            amazing.text = dateFormatter2.string(from: nowDate2 as Date)
+            amazing.text = dateFormatter.string(from: nowDate as Date)
             amazing2.text = end
         }
     }
-
+    
+    @IBAction func list() {
+        self.performSegue(withIdentifier: "list", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "list"{
+            let viewcontrollerlist = segue.destination as! ViewControllerList
+            viewcontrollerlist.text1 = self.text1
+            viewcontrollerlist.text2 = self.text2
+            viewcontrollerlist.tokyo = self.name
+            print()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -24,18 +24,7 @@ class ViewController4: UIViewController {
             label3.text = name
     }
     
-    @IBAction func addButtonTapped(sender: AnyObject) {
-        let newmatter = Time()
-        newmatter.title = name
-        do{
-            let realm = try Realm()
-            try realm.write({ () -> Void in
-                realm.add(newmatter)
-                print("Matter Saved")
-            })
-        }catch{
-            print("Save is Faild")
-        }
+    @IBAction func checked() {
         self.performSegue(withIdentifier: "countdown", sender: nil)
     }
     

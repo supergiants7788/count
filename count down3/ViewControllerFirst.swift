@@ -82,7 +82,6 @@ class ViewControllerFirst: UIViewController, UICollectionViewDataSource, UIColle
         dateformatter.timeStyle = .none
         dateformatter.dateStyle = .full
         let iphone = datemanager.currentdayback(index: indexPath.row)
-//        moving = "\(datemanager.currentdayback(index: indexPath.row))"
         
         let alert: UIAlertController = UIAlertController(title: "確認", message: "\(dateformatter.string(from: iphone))でよろしいですか？", preferredStyle:  UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
