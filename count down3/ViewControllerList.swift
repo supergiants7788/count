@@ -15,28 +15,42 @@ class ViewControllerList: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     let ud = UserDefaults.standard
     
-    
     var text1: String = ""
     var text2: String = ""
     
+    var times = [String]()
+    
     var timer: Timer!
+    
+    var end: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
 //        ud.removeObject(forKey: "scoresKey")
+//        ud.removeObject(forKey: "scoresKey2")
         
         if ud.object(forKey: "scoresKey") != nil {
             myItems = ud.object(forKey: "scoresKey") as! [String]
         }
+        if ud.object(forKey: "scoresKey2") != nil {
+            times = ud.object(forKey: "scoresKey2") as! [String]
+        }
         if tokyo == "" {
-            
         }else{
             myItems.append("\(tokyo)")
+        }
+        if end == "" {
+        }else{
+            times.append("\(end)")
         }
         tableView.delegate = self
         tableView.dataSource = self
         ud.set(myItems, forKey: "scoresKey")
+        ud.synchronize()
+        ud.set(times, forKey: "scoresKey2")
         ud.synchronize()
     }
     
@@ -65,12 +79,19 @@ class ViewControllerList: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // セルの高さを設定
         return 64
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         // アクセサリボタン（セルの右にあるボタン）がタップされた時の処理
         print("タップされたアクセサリがあるセルのindex番号: \(indexPath.row)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "counting"{
+            let viewcontrollerresult = segue.destination as! ViewControllerResult
+            viewcontrollerresult.sendend = self.end
+            
+        }
     }
 }

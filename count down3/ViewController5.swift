@@ -40,6 +40,10 @@ class ViewController5: UIViewController {
     
     var timer: Timer!
     
+    var sendstart: String!
+    var sendend: String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         label1.text = text1
@@ -85,21 +89,6 @@ class ViewController5: UIViewController {
         let startDate:NSDate? = dateFormatter.date(from: start) as NSDate?
         let endDate:NSDate? = dateFormatter.date(from: end) as NSDate?
         var components = cal.dateComponents(calUnit, from: startDate! as Date, to: endDate! as Date)
-        if components.year == 0 {
-            test.isHidden = true
-            if components.month == 0 {
-                test2.isHidden = true
-                if components.day == 0 {
-                    test3.isHidden = true
-                    if components.hour == 0 {
-                        test4.isHidden = true
-                        if components.minute == 0 {
-                            test5.isHidden = true
-                        }
-                    }
-                }
-            }
-        }
         if components.second! <= 0  {
             if exciting.text == "\(name)まで"{
                 test.text = "\(components.year!) 年"
@@ -117,7 +106,7 @@ class ViewController5: UIViewController {
                 test5.text = "\(components.minute! * -1) 分"
                 test6.text = "\(components.second! * -1) 秒"
                 amazing.text = end
-                amazing2.text = dateFormatter.string(from: nowDate as Date)
+                amazing2.text = start
             }
         }else{
             exciting.text = "\(name)まで"
@@ -127,9 +116,10 @@ class ViewController5: UIViewController {
             test4.text = "\(components.hour!) 時間"
             test5.text = "\(components.minute!) 分"
             test6.text = "\(components.second!) 秒"
-            amazing.text = dateFormatter.string(from: nowDate as Date)
+            amazing.text = start
             amazing2.text = end
         }
+        sendend = end
     }
     
     @IBAction func list() {
@@ -139,10 +129,10 @@ class ViewController5: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "list"{
             let viewcontrollerlist = segue.destination as! ViewControllerList
+            viewcontrollerlist.end = self.sendend
             viewcontrollerlist.text1 = self.text1
             viewcontrollerlist.text2 = self.text2
             viewcontrollerlist.tokyo = self.name
-            print()
         }
     }
     
